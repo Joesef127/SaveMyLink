@@ -1,109 +1,136 @@
-# HiveTodo
+# SaveMyLink - A Chrome Extension to Save Links
 
-**HiveTodo** is a task management application designed to help users create, manage, and organize tasks efficiently. The application supports features such as task completion tracking, task deletion, and a sleek, responsive UI. It is built with modern web technologies to ensure a smooth user experience.
-
-## Project URL
-[HiveTodo](https://hivetodo2.vercel.app)
-
----
+SaveMyLink is a lightweight React-TypeScript Chrome extension that helps you save and organize important links from your browser. With an intuitive interface and simple functionality, you can revisit your saved links anytime with ease.
 
 ## Features
-- **Task Creation and Management**: Add, edit and delete tasks easily.
-- **Task Completion Tracking**: Mark tasks as completed and view completed tasks.
-- **Responsive Design**: Optimized for mobile, tablet, and desktop devices.
-- **User-friendly Interface**: Intuitive navigation and interactions.
 
----
+- **Save URLs Manually:** Add any URL using the input field and save it to your list.
+- **Save Current Tab's URL:** Quickly capture the URL of the active browser tab.
+- **Persistent Storage:** Saved links remain intact even after you close the extension.
+- **Responsive Design:** A user-friendly interface styled with TailwindCSS for both desktop and mobile views.
+- **Validation:** Ensures only valid URLs are saved.
 
-## Tech Stack
-- **Frontend**: React.js with TypeScript
-- **Styling**: TailwindCss for modular and responsive styling
-- **Deployment**: Vercel
+## Technologies Used
 
----
+- **React**: Frontend library for building user interfaces.
+- **TypeScript**: Ensures type safety and reliability.
+- **TailwindCSS**: Provides utility-first CSS for responsive design.
+- **Chrome API**: Used to fetch and save the active tab's URL.
 
-## Installation and Setup
+## Installation
 
-### Prerequisites
-Ensure you have the following installed on your system:
-- Node.js (v14 or higher)
-- npm or yarn
-
-### Steps
-1. Clone the repository:
+1. Clone this repository to your local machine:
    ```bash
-   git clone https://github.com/joesef127/todo.git
+   git clone https://github.com/your-username/SaveMyLink.git
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd hivetodo
+   cd SaveMyLink
    ```
 
 3. Install dependencies:
    ```bash
    npm install
-   # or
-   yarn install
    ```
 
-4. Start the development server:
+4. Build the project:
    ```bash
-   npm start
-   # or
-   yarn start
+   npm run build
    ```
 
-5. Open the application in your browser:
-   ```
-   http://localhost:3000
-   ```
-
-
----
+5. Load the extension in Chrome:
+   - Open `chrome://extensions/` in your browser.
+   - Enable **Developer mode**.
+   - Click on **Load unpacked** and select the `build` folder in the project directory.
 
 ## Usage
-1. Add tasks by typing the task details and clicking the "Add Task" button.
-2. Mark tasks as completed by clicking the complete button.
-3. Delete task using the delete button.
-4. View completed tasks by clicking the "Completed Tasks" button.
-5. Clear completed task list by clicking the "clear tasks" button.
-6. Edit task by clicking the edit button.
 
+1. Open the extension by clicking the SaveMyLink icon in your browser toolbar.
+2. To manually save a link:
+   - Enter the URL in the input field.
+   - Click on "Save URL."
+3. To save the current tab's URL:
+   - Click on the "Save From Tab" button.
+4. View your saved links in the "Saved Links" section. Click on any link to open it in a new tab.
 
+## File Structure
 
----
+```
+SaveMyLink/
+├── public/
+│   ├── manifest.json  # Chrome extension manifest file
+│   ├── index.html     # HTML template
+│   └── assets/        # Static assets (images, icons, etc.)
+├── src/
+│   ├── components/
+│   │   └── LinkBox.tsx  # Component to render individual saved links
+│   ├── App.tsx          # Main application component
+│   ├── index.tsx        # Entry point for React
+│   ├── styles/
+│   │   └── tailwind.css # TailwindCSS styles
+│   └── utils/
+│       └── validators.ts # Helper function for URL validation
+├── package.json        # Project dependencies and scripts
+└── tsconfig.json       # TypeScript configuration
+```
 
-## Deployment
-The project is hosted on Vercel. To deploy changes:
-1. Push your changes to the `main` branch.
-2. Vercel will automatically deploy the updated version.
+## Configuration
 
----
+### Chrome Permissions
+Ensure the `manifest.json` file contains the following permissions:
 
-## Contributing
-We welcome contributions to improve HiveTodo! Please follow these steps:
+```json
+{
+  "permissions": ["tabs", "activeTab"],
+  "host_permissions": ["<all_urls>"]
+}
+```
+
+### TypeScript Setup
+Install the Chrome type definitions:
+```bash
+npm install @types/chrome --save-dev
+```
+Update `tsconfig.json` to include:
+```json
+{
+  "compilerOptions": {
+    "types": ["chrome"]
+  }
+}
+```
+
+## Troubleshooting
+
+- **Cannot find name 'chrome':** Ensure you have installed the `@types/chrome` package and updated your `tsconfig.json`.
+- **Extension not loading:** Double-check the manifest file and ensure it's placed in the `public` folder.
+- **Invalid URLs:** Use the built-in validation to ensure URLs are correctly formatted before saving.
+
+## Contribution
+
 1. Fork the repository.
-2. Create a feature branch:
+2. Create a new branch:
    ```bash
-   git checkout -b feature/your-feature-name
+   git checkout -b feature-name
    ```
 3. Commit your changes:
    ```bash
-   git commit -m "Add your message here"
+   git commit -m "Add new feature"
    ```
-4. Push to your branch:
+4. Push to the branch:
    ```bash
-   git push origin feature/your-feature-name
+   git push origin feature-name
    ```
-5. Open a pull request.
+5. Open a Pull Request.
 
+## License
+
+This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
-For inquiries, reach out via email:
-- **Adegbola Adedayo**: [Adegboladayor@gmail.com](mailto:Adegboladayor@gmail.com)
 
-Follow and explore my other projects on GitHub:
-- **GitHub**: [joesef127](https://github.com/joesef127)
+For any inquiries or feedback, feel free to contact:
+- Email: yorubamerlin@example.com
+- GitHub: [yorubamerlin](https://github.com/yorubamerlin)
 
-# SaveMyLink
