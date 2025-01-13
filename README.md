@@ -120,14 +120,10 @@ Update `tsconfig.json` to include:
    ```
 5. Open a Pull Request.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
-
 For any inquiries or feedback, feel free to contact:
-- Email: yorubamerlin@example.com
-- GitHub: [yorubamerlin](https://github.com/yorubamerlin)
+- **Adegbola Adedayo**: [Adegboladayor@gmail.com](mailto:Adegboladayor@gmail.com)
 
-# SaveMyLink
+Follow and explore my other projects on GitHub:
+- **GitHub**: [joesef127](https://github.com/joesef127)
