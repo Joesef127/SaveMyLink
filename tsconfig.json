@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "types": ["chrome"],
     "allowImportingTsExtensions": true,
     "noEmit": true,
     "target": "es2016",
