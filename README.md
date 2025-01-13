@@ -67,10 +67,6 @@ SaveMyLink/
 │   │   └── LinkBox.tsx  # Component to render individual saved links
 │   ├── App.tsx          # Main application component
 │   ├── index.tsx        # Entry point for React
-│   ├── styles/
-│   │   └── tailwind.css # TailwindCSS styles
-│   └── utils/
-│       └── validators.ts # Helper function for URL validation
 ├── package.json        # Project dependencies and scripts
 └── tsconfig.json       # TypeScript configuration
 ```
