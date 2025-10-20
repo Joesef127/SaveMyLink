@@ -166,7 +166,7 @@ const [idCounter, setIdCounter] = useState<number>(() => {
             <div>
               {urls.length !== 0 ? (
                 <ul className="my-4">
-                  {urls.map(
+                  {urls.toReversed().map(
                     (url) =>
                       url.href && (
                         <LinkBox
